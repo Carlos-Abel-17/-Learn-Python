@@ -13,14 +13,11 @@ def obtener_numero_inter(tupla):
        ordenados = sorted(tupla)
        return ordenados[1]
 
-
-
 def devolver_distintos(*args):
     print(len(args))
     if len(args) != 3:
         raise ValueError("Se deben proporcionar al menos tres argumentos.")
 
-    
     for i in args:
         if not isinstance(i, (int, float)):
             raise ValueError("Todos los argumentos deben ser números.")
@@ -39,6 +36,6 @@ def devolver_distintos(*args):
     else: 
         return obtener_numero_inter(args)
     
-print(devolver_distintos(3,6,9,5,6,8))  # Debería devolver 3
+print(devolver_distintos(3,6,9,4))  # Debería devolver 3
 #print(devolver_distintos(1,2,3))        # Debería devolver 2
     
