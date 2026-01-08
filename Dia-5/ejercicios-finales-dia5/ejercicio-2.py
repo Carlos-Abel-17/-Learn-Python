@@ -1,7 +1,13 @@
-def  analizador_texto(texto):
+def letras_unicas(palabra):
 
-    texto_list = list(texto)
-    unicos = set(texto_list)
-    return sorted(unicos)
+    mi_set = set()
 
-print(analizador_texto("holaquetal"))  # Debería devolver ['h', 'o', 'l', 'a', ' ', 'q', 'u', 'e', 't']
+    for letras in palabra:
+        mi_set.add(letras)
+
+    mi_lista = list(mi_set)
+    mi_lista.sort()
+
+    return mi_lista
+
+print(letras_unicas("programacion"))  # Debería devolver ['a', 'c', 'g', 'i', 'm', 'n', 'o', 'p', 'r']
