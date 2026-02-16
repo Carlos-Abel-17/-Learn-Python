@@ -1,0 +1,161 @@
+# 📚 Sistema de Gestión de Recetas - Día 6
+
+![Sistema de Recetas](docs/image.png)
+
+## 📋 Descripción
+
+Este es un sistema de gestión de recetas desarrollado en Python que te permite organizar tus recetas culinarias en categorías. El programa crea automáticamente una carpeta llamada "Recetas" en tu directorio home y te permite crear, leer y eliminar tanto recetas como categorías de manera sencilla.
+
+## 🚀 Requisitos
+
+- Python 3.x instalado en tu sistema
+- No se requieren librerías adicionales (usa solo librerías estándar de Python)
+
+## 📁 Estructura de Carpetas
+
+El programa crea automáticamente la siguiente estructura:
+
+```
+~/Recetas/
+├── Postres/
+│   ├── Tarta de manzana.txt
+│   └── Brownies.txt
+├── Platos principales/
+│   ├── Pasta carbonara.txt
+│   └── Pollo al curry.txt
+└── Ensaladas/
+    └── Ensalada César.txt
+```
+
+**Nota:** La carpeta "Recetas" se crea automáticamente en tu directorio home (`C:\Users\TuUsuario\Recetas` en Windows o `~/Recetas` en Linux/Mac).
+
+## 🎯 Cómo Usar el Programa
+
+### 1. Ejecutar el Programa
+
+```bash
+python proyecto-Dia6.py
+```
+
+### 2. Menú Principal
+
+Al ejecutar el programa, verás un menú con las siguientes opciones:
+
+```
+**************************************************
+*****BIENVENIDO AL SISTEMA DE RECETAS***********
+**************************************************
+
+Las recetas se encuentran en [ruta]
+Total recetas: [número]
+
+Elige una opcion:
+
+        [1] - Leer receta
+        [2] - Crear receta nueva
+        [3] - Crear categoria nueva
+        [4] - Eliminar receta
+        [5] - Eliminar categoria
+        [6] - Salir del programa
+```
+
+### 3. Opciones Disponibles
+
+#### 📖 Opción 1: Leer Receta
+1. Selecciona la opción `1`
+2. Elige una categoría de la lista mostrada
+3. Elige una receta de la lista mostrada
+4. El contenido de la receta se mostrará en pantalla
+5. Presiona `v` para volver al menú principal
+
+#### ✍️ Opción 2: Crear Receta Nueva
+1. Selecciona la opción `2`
+2. Elige una categoría existente donde quieres guardar la receta
+3. Ingresa el nombre de la receta (sin extensión .txt)
+4. Escribe el contenido de la receta
+5. La receta se guardará automáticamente como archivo `.txt`
+6. Presiona `v` para volver al menú principal
+
+**Ejemplo:**
+```
+Elija el nombre de la receta: Tarta de manzana
+Escribe tu nueva receta: 
+Ingredientes:
+- 500g de manzanas
+- 200g de harina
+...
+```
+
+#### 📁 Opción 3: Crear Categoría Nueva
+1. Selecciona la opción `3`
+2. Ingresa el nombre de la nueva categoría
+3. La categoría se creará como una nueva carpeta
+4. Presiona `v` para volver al menú principal
+
+**Ejemplo:**
+```
+Elija el nombre de la categoria: Bebidas
+```
+
+#### 🗑️ Opción 4: Eliminar Receta
+1. Selecciona la opción `4`
+2. Elige la categoría donde está la receta
+3. Elige la receta que deseas eliminar
+4. La receta se eliminará permanentemente
+5. Presiona `v` para volver al menú principal
+
+**⚠️ Advertencia:** Esta acción no se puede deshacer.
+
+#### 🗂️ Opción 5: Eliminar Categoría
+1. Selecciona la opción `5`
+2. Elige la categoría que deseas eliminar
+3. La categoría y todas sus recetas se eliminarán permanentemente
+4. Presiona `v` para volver al menú principal
+
+**⚠️ Advertencia:** Esta acción eliminará la categoría y todas las recetas dentro de ella. No se puede deshacer.
+
+#### 🚪 Opción 6: Salir del Programa
+1. Selecciona la opción `6`
+2. El programa se cerrará
+
+## 💡 Consejos de Uso
+
+- **Organización:** Crea categorías lógicas como "Postres", "Platos principales", "Ensaladas", "Bebidas", etc.
+- **Nombres descriptivos:** Usa nombres claros para tus recetas que te permitan identificarlas fácilmente
+- **Contenido de recetas:** Puedes escribir ingredientes, instrucciones, tiempo de cocción, porciones, etc.
+- **Backup:** Si tienes recetas importantes, considera hacer una copia de seguridad de la carpeta "Recetas"
+
+## 🔧 Características Técnicas
+
+- **Lenguaje:** Python 3
+- **Librerías utilizadas:**
+  - `pathlib.Path` - Para manejo de rutas y archivos
+  - `os` - Para operaciones del sistema operativo
+- **Almacenamiento:** Archivos de texto plano (.txt) organizados en carpetas
+- **Interfaz:** Menú interactivo en consola
+
+## 📝 Notas Importantes
+
+- El programa crea automáticamente la carpeta "Recetas" si no existe
+- Las recetas se guardan como archivos `.txt` (el programa agrega la extensión automáticamente)
+- Si intentas crear una receta o categoría con un nombre que ya existe, el programa te avisará
+- Las categorías deben estar vacías para poder eliminarlas (o elimina primero las recetas)
+
+## 🐛 Solución de Problemas
+
+**Problema:** No se pueden crear recetas
+- **Solución:** Asegúrate de que la carpeta "Recetas" existe y tienes permisos de escritura
+
+**Problema:** No aparecen categorías al iniciar
+- **Solución:** Crea al menos una categoría usando la opción 3 antes de crear recetas
+
+**Problema:** Error al eliminar categoría
+- **Solución:** Asegúrate de que la categoría esté vacía o elimina primero todas las recetas dentro de ella
+
+## 📄 Licencia
+
+Este proyecto es parte de un curso de aprendizaje de Python.
+
+---
+
+¡Disfruta organizando tus recetas! 🍳👨‍🍳👩‍🍳
